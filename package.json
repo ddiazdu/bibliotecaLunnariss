@@ -1,0 +1,45 @@
+{
+  "name": "proyecto-lunaris",
+  "version": "1.0.0",
+  "description": "Blog para biblioteca de lunnariss",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "server": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddiazdu/labibliotecadelunaris.git"
+  },
+  "keywords": [
+    "MVC",
+    "PUG",
+    "NODE",
+    "EXPRESS",
+    "SEQUELIZE"
+  ],
+  "author": "Diego Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddiazdu/labibliotecadelunaris/issues"
+  },
+  "homepage": "https://github.com/ddiazdu/labibliotecadelunaris#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.22",
+    "pug": "^3.0.2",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.0"
+  }
+}
