@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS } = process.env;
+const { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, BACKEND_URL } = process.env;
 
 const emailRegistro = async (datos) => {
   const transport = nodemailer.createTransport({
@@ -24,7 +24,7 @@ const emailRegistro = async (datos) => {
     
       <p> Hola ${nombre} confirma tu cuenta en labibliotecadelunnaris.com </p>
       
-      <p> Tu cuenta ya está lista, solo debes confirmarla haciendo click en el siguiente enlace: <a href="">Confirmar Cuenta</a> </p>
+      <p> Tu cuenta ya está lista, solo debes confirmarla haciendo click en el siguiente enlace: <a href="${BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">Confirmar Cuenta</a> </p>
 
       <p> Si tu no creaste esta cuenta, puedes ignorar este mensaje</p>
     `,

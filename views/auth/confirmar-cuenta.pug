@@ -1,0 +1,11 @@
+extends ../layout/index 
+
+block contenido
+    div(class="py-2")
+        h1(class="text-center text-3xl font-bold pt-10") La biblioteca de 
+            span(class="text-indigo-500 text-center text-3xl font-bold") Lunnariss
+        h2(class="text-center text-2xl font-extrabold mt-10")= pagina
+    div(class="bg-white shadow py-8 px-4 rounded-lg max-w-md mx-auto")
+        p(class= error ? 'bg-red-500' : 'bg-green-500'  ).py-2.px-5.rounded-lg.w-full.text-white.font-bold.text-center.uppercase= mensaje
+            if !error
+                a(href="auth/login" class="text-center text-sm font-bold text-slate-600 uppercase mt-5 block") Ya puedes iniciar sesión
